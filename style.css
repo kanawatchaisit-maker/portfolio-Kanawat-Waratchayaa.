@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background: #f4f8ff;
+  color: #183153;
+  line-height: 1.8;
+}
+
+header {
+  background: #0b3d75;
+  color: white;
+  padding: 18px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+}
+
+header h2 {
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a9d4ff;
+}
+
+.hero {
+  min-height: 450px;
+  background:
+    linear-gradient(135deg, rgba(11,61,117,0.94), rgba(40,120,200,0.88)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-label {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 60px);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: white;
+  color: #0b3d75;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: #a9d4ff;
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 65px 8%;
+  scroll-margin-top: 90px;
+}
+
+.section-title {
+  text-align: center;
+  color: #0b3d75;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,45,90,0.09);
+  margin-bottom: 25px;
+  border-top: 5px solid #2878c8;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,45,90,0.14);
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  width: 180px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 4px solid #d5e9ff;
+  margin-bottom: 18px;
+  background: #e5f2ff;
+}
+
+.card h3 {
+  color: #0b3d75;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  color: #2468a9;
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 7px 0;
+}
+
+.highlight {
+  color: #0b5ca8;
+  font-weight: 600;
+}
+
+.goal {
+  background: #e5f2ff;
+  border-radius: 15px;
+  padding: 22px;
+  margin-top: 15px;
+}
+
+.education-section {
+  background: #eaf3ff;
+}
+
+.activity-card {
+  border-left: 5px solid #2878c8;
+}
+
+.goals-section {
+  background: #eaf3ff;
+}
+
+footer {
+  background: #0b3d75;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.copyright {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #0b3d75;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+#backToTop:hover {
+  background: #2878c8;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+    padding: 15px 5%;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 45px 5%;
+  }
+
+  .hero {
+    padding: 75px 15px;
+    min-height: 400px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
